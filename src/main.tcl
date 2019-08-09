@@ -106,6 +106,7 @@ proc buildSection2 { } {
 	checkbutton .main.right.physicalBenefits -variable physicalBenefits -text "Physical Benefits"
 	checkbutton .main.right.breathingControl -variable breathingControl -text "Breathing Control"
 	checkbutton .main.right.practicalDefenseSkills -variable practicalDefenseSkills -text "Practical Defense Skills"
+	button .main.right.submit2 -text "Submit" -command submitSection2
 	grid config .main.right.mentalBenefitsLbl -column 0 -row 0 -sticky "w"
 	grid config .main.right.focus -column 0 -row 1 -sticky "w"
 	grid config .main.right.alertness -column 1 -row 1 -sticky "w" 
@@ -146,6 +147,193 @@ proc buildSection2 { } {
 	grid config .main.right.physicalBenefits  -column 1 -row 13 -sticky "w"
 	grid config .main.right.breathingControl -column 2 -row 13 -sticky "w"
 	grid config .main.right.practicalDefenseSkills -column 3 -row 13 -sticky "w"
+	grid config .main.right.submit2 -column 3 -row 14 -sticky "w"
+}
+proc buildSection3 { } {
+	.main.left.section3 configure -foreground green
+	label .main.right.howFindAcademyLbl -text "How did you happen to hear about our Academy?"
+	entry .main.right.howFindAcademyEnt
+	label .main.right.whatMotivatedLbl -text "What motivated you to bring your son / daughter today?"
+	entry .main.right.whatMotivatedEnt
+	label .main.right.isThereAnyoneChildWouldLikeToAttendWithLbl -text "Is there anyone your son / daughter would like to do this with?"
+	radiobutton .main.right.attendWithYes -text "Yes" -variable attendWithYesNo
+	radiobutton .main.right.attendWithNo -text "No" -variable attendWithYesNo -width 20
+	label .main.right.attendWithWhoLbl -text "Name: "
+	entry .main.right.attendWithWhoEnt
+	label .main.right.activitiesAlready -text "Does your son / Daughter do any activities already?"
+	radiobutton .main.right.activitiesAlreadyYes -text "Yes" -variable activitiesAlreadyYesNo
+	radiobutton .main.right.activitiesAlreadyNo -text "No" -variable activitiesAlreadyYesNo
+	label .main.right.activityLbl -text "Activity: "
+	entry .main.right.activityEnt
+	checkbutton .main.right.mon -variable mon -text "Mon"
+	checkbutton .main.right.tue -variable tue -text "Tue"
+	checkbutton .main.right.wed -variable wed -text "Wed"
+	checkbutton .main.right.thu -variable thu -text "Thu"
+	checkbutton .main.right.fri -variable fri -text "Fri"
+	checkbutton .main.right.sat -variable sat -text "Sat"
+	checkbutton .main.right.sun -variable sun -text "Sun"
+	label .main.right.timeLbl -text "Time(S)"
+	entry .main.right.timeEnt
+	button .main.right.submit3 -text "Submit" -command submitSection3
+
+	grid config .main.right.howFindAcademyLbl -column 0 -row 0 -columnspan 4 -sticky "w"
+	grid config .main.right.howFindAcademyEnt -column 1 -row 1 -columnspan 3 -sticky "w"
+	grid config .main.right.whatMotivatedLbl -column 0 -row 2 -columnspan 4 -sticky "w"
+	grid config .main.right.whatMotivatedEnt -column 1 -row 3 -columnspan 3 -sticky "w"
+	grid config .main.right.isThereAnyoneChildWouldLikeToAttendWithLbl -column 0 -row 4 -columnspan 4 -sticky "w"
+	grid config .main.right.attendWithYes -column 0 -row 5 -sticky "w"
+	grid config .main.right.attendWithNo -column 1 -row 5 -sticky "w"
+	grid config .main.right.attendWithWhoLbl -column 2 -row 5 -sticky "w"
+	grid config .main.right.attendWithWhoEnt -column 3 -row 5 -sticky "w"
+	grid config .main.right.activitiesAlready -column 0 -row 6 -columnspan 4 -sticky "w"
+	grid config .main.right.activitiesAlreadyYes -column 0 -row 7 -sticky "w"
+	grid config .main.right.activitiesAlreadyNo -column 1 -row 7 -sticky "w"
+	grid config .main.right.activityLbl -column 0 -row 8  -sticky "w"
+	grid config .main.right.activityEnt -column 1 -columnspan 3 -row 8 -sticky "w"
+	grid config .main.right.mon -column 0 -row 9 -sticky "w"
+	grid config .main.right.tue -column 1 -row 9 -sticky "w"
+	grid config .main.right.wed -column 2 -row 9 -sticky "w"
+	grid config .main.right.thu -column 3 -row 9 -sticky "w"
+	grid config .main.right.fri -column 0 -row 10 -sticky "w"
+	grid config .main.right.sat -column 1 -row 10 -sticky "w"
+	grid config .main.right.sun -column 2 -row 10 -sticky "w"
+	grid config .main.right.timeLbl -column 0 -row 11 -sticky "w"
+	grid config .main.right.timeEnt -column 1 -row 11
+	grid config .main.right.submit3 -column 3 -row 12 -sticky "w"
+}
+
+proc buildSection4 { } {
+	label .main.right.medicalConditionsLbl -text "Please check any medical conditions we should be aware of."
+	label .main.right.medicalConditionsSubLbl -text "Medical Conditions"
+	checkbutton .main.right.asthma -variable asthma -text "Asthma"
+	checkbutton .main.right.arthritus -variable arthritus -text "Arthritus"
+	checkbutton .main.right.diabetes -variable diabetus -text "Diabetus"
+	checkbutton .main.right.kneeProblems -variable kneeProblems -text "Knee Problems"
+	checkbutton .main.right.backProblems -variable backProblems -text "Back Problems"
+	checkbutton .main.right.heartConditions -variable heartConditions -text "Heart Conditions"
+	checkbutton .main.right.highBloodPressure -variable highhBloodPressure -text "High Blood Pressure"
+	label .main.right.alergicReactionLbl -text "Alergic Reactions"
+	entry .main.right.alergicReactionEnt
+	label .main.right.physicalLimitationsLbl -text "Physical Limitations"
+	entry .main.right.physicalLimitationsEnt
+	label .main.right.specialMedicationLbl -text "Special Medications"
+	entry .main.right.specialMedicationEnt
+	button .main.right.submit4 -text "Submit" -command submitSection4
+
+	grid config .main.right.medicalConditionsLbl -column 0 -row 0 -columnspan 4 -sticky "w"
+	grid config .main.right.medicalConditionsSubLbl -column 0 -row 1 -columnspan 4 -sticky "w"
+	grid config .main.right.asthma -column 0 -row 2 -sticky "w"
+	grid config .main.right.arthritus -column 1 -row 2 -sticky "w"
+	grid config .main.right.diabetes -column 2 -row 2 -sticky "w"
+	grid config .main.right.kneeProblems -column 3 -row 2 -sticky "w"
+	grid config .main.right.backProblems -column 0 -row 3 -sticky "w"
+	grid config .main.right.heartConditions -column 1 -row 3 -sticky "w"
+	grid config .main.right.highBloodPressure -column 2 -row 3 -sticky "w"
+	grid config .main.right.alergicReactionLbl -column 0 -row 4 -columnspan 4 -sticky "w"
+	grid config .main.right.alergicReactionEnt -column 0 -row 5 -columnspan 4 -sticky "w"
+	grid config .main.right.physicalLimitationsLbl -column 0 -row 6 -columnspan 4 -sticky "w"
+	grid config .main.right.physicalLimitationsEnt -column 0 -row 7 -columnspan 4 -sticky "w"
+	grid config .main.right.specialMedicationLbl -column 0 -row 8 -columnspan 4 -sticky "w"
+	grid config .main.right.specialMedicationEnt -column 0 -row 9 -columnspan 4 -sticky "w"
+	grid config .main.right.submit4 -column 3 -row 9 -sticky "w"
+
+	.main.left.section4 configure -foreground green
+}
+
+proc buildSection5 { } {
+	label .main.right.question5 -text "Does your child have any previous martial arts experience?"
+	checkbutton .main.right.question5Y -variable question5Y -text "Yes"
+	checkbutton .main.right.question5N -variable question5N -text "No"
+	label .main.right.question6 -text "If yes is he / she still training?"
+	checkbutton .main.right.question6Y -variable question5Y -text "Yes"
+	checkbutton .main.right.question6N -variable question5N -text "No"
+	label .main.right.question6NoAddendum -text "If No, why did they stop?"
+	label .main.right.question6LikesLbl -text "Likes:"
+	entry .main.right.question6LikesEnt
+	label .main.right.question6DislikesLbl -text "Dislikes:"
+	entry .main.right.question6DislikesEnt
+	label .main.right.question7 -text "How long have you been interested in Martial Arts for your child?"
+	checkbutton .main.right.question7ntl -variable question7ntl -text "Not too long"
+	checkbutton .main.right.question7fm -variable question7fm -text "Few Months"
+	checkbutton .main.right.question7o1y -variable question7o1y -text "Over 1 Year"
+	label .main.right.question8Lbl -text "What are the two most important things you want your son / daughter to get out of thid program?"
+	entry .main.right.question8Ent
+	label .main.right.question9Lbl -text "If your son / daughter achieves these benefits, how would feel?"
+	entry .main.right.question9Ent
+	label .main.right.question10Lbl -text "How would it benefit your child:"
+	label .main.right.question10ALbl -text "Short Term:"
+	label .main.right.question10BLbl -text "Medium:"
+	label .main.right.question10CLbl -text "Long Term:"
+	entry .main.right.question10AEnt
+	entry .main.right.question10BEnt
+	entry .main.right.question10CEnt
+	label .main.right.question11Lbl -text "How serious are you about enrolling your child in our programme to recieve these benefits?"
+	entry .main.right.question11Ent
+	label .main.right.question12Lbl -text "Do youu feel your significant other would support your descision to enroll your son / daughter in this programme to recieve these benefits?"
+	checkbutton .main.right.question12Y -variable question12Y -text "Yes"
+	checkbutton .main.right.question12N -variable question12N -text "No"
+	label .main.right.question13Lbl -text "Based on everything we have discussed, do you feel we  have something that your child can benefit from and would like him / her to continue to learn?"
+	checkbutton .main.right.question13Y -variable question13Y -text "Yes"
+	checkbutton .main.right.question13N -variable question13N -text "No"
+	label .main.right.question14Lbl -text "Is there anything preventing you from enrolling today?"
+	checkbutton .main.right.question14Y -variable question14Y -text "Yes"
+	checkbutton .main.right.question14N -variable question14N -text "No"
+	entry .main.right.question14Ent
+	label .main.right.question15Lbl -text "Declaration in question 15:"
+	checkbutton .main.right.question15Y -variable question15Y -text "Yes"
+	checkbutton .main.right.question15N -variable question15N -text "No"
+	label .main.right.question16Lbl -text "As a referal based academy our new students are encoraged to reccommend a friend."
+	label .main.right.question16NLbl -text "Name:"
+	entry .main.right.question16NEnt
+	label .main.right.question16CLbl -text "Contact:"
+	entry .main.right.question16CEnt
+	grid config .main.right.question5 -column 0 -row 0 -columnspan 4 -sticky "w"
+	grid config .main.right.question5Y -column 0 -row 1 -columnspan 4 -sticky "w"
+	grid config .main.right.question6 -column 0 -row 2 -columnspan 4 -sticky "w"
+	grid config .main.right.question6Y -column 0 -row 3 -sticky "w"
+	grid config .main.right.question6N -column 1 -row 3 -sticky "w"
+	grid config .main.right.question6NoAddendum -column 2 -row 3 -columnspan 2 -sticky "w"
+	grid config .main.right.question6LikesLbl -column 0 -row 4 -sticky "e"
+	grid config .main.right.question6LikesEnt -column 1 -row 4 -sticky "w"
+	grid config .main.right.question6DislikesLbl -column 2 -row 4 -sticky "e"
+	grid config .main.right.question6DislikesEnt -column 3 -row 4 -sticky "w"
+	grid config .main.right.question7 -column 0 -row 5 -columnspan 4 -sticky "w"
+	grid config .main.right.question7ntl -column 0 -row 6 -sticky "w"
+	grid config .main.right.question7fm -column 1 -row 6 -sticky "w"
+	grid config .main.right.question7o1y -column 2 -row 6 -sticky "w"
+	grid config .main.right.question8Lbl -column 0 -row 7 -columnspan 4 -sticky "w"
+	grid config .main.right.question8Ent -column 0 -row 8 -columnspan 4 -sticky "w"
+	grid config .main.right.question9Lbl -column 0 -row 9 -columnspan 4 -sticky "w"
+	grid config .main.right.question9Ent -column 0 -row 10 -columnspan 4 -sticky "w"
+	grid config .main.right.question10Lbl -column 0 -row 11 -columnspan 4 -sticky "w"
+	grid config .main.right.question10ALbl -column 0 -row 12 -sticky "e"
+	grid config .main.right.question10AEnt -column 1 -row 12 -sticky "w"
+	grid config .main.right.question10BLbl -column 0 -row 13 -sticky "e"
+	grid config .main.right.question10BLbl -column 1 -row 13 -sticky "w"
+	grid config .main.right.question10CEnt -column 0 -row 14 -sticky "w"
+	grid config .main.right.question10CEnt -column 1 -row 14 -sticky "e"
+	grid config .main.right.question11Lbl -column 0 -row 15 -columnspan 4 -sticky "w"
+	grid config .main.right.question11Ent -column 0 -row 16 -columnspan 4 -sticky "w"
+	grid config .main.right.question12Lbl -column 0 -row 17 -columnspan 4 -sticky "w"
+	grid config .main.right.question12Y -column 0 -row 18 -sticky "w"
+	grid config .main.right.question12N -column 1 -row 18 -sticky "w"
+	grid config .main.right.question13Lbl -column 0 -row 19 -columnspan 4 -sticky "w"
+	grid config .main.right.question13Y -column 0 -row 20 -sticky "w"
+	grid config .main.right.question13N -column 1 -row 20 -sticky "w"
+	grid config .main.right.question14Lbl -column 0 -row 21 -columnspan 4 -sticky "w"
+	grid config .main.right.question14Y -column 0 -row 22 -sticky "w"
+	grid config .main.right.question14N -column 1 -row 22 -sticky "w"
+	grid config .main.right.question14Ent -column 2 -row 22 -sticky "w"
+	grid config .main.right.question15Lbl -column 0 -row 23 -columnspan 4 -sticky "w"
+	grid config .main.right.question15Y -column 0 -row 24 -sticky "w"
+	grid config .main.right.question15N -column 1 -row 24 -sticky "w"
+	grid config .main.right.question16Lbl -column 0 -row 25 -columnspan 4 -sticky "w"
+	grid config .main.right.question16NLbl -column 0 -row 26 -sticky "e"
+	grid config .main.right.question16NEnt -column 1 -row 26 -sticky "w"
+	grid config .main.right.question16CLbl -column 2 -row 26 -sticky "e"
+	grid config .main.right.question16CEnt -column 3 -row 26 -sticky "w"
+
+	.main.left.section5 configure -foreground green
 }
 
 proc submitSection1 { } {
@@ -213,6 +401,103 @@ proc submitSection1 { } {
 
 }
 
+proc submitSection2 { } {
+	grid forget .main.right.mentalBenefitsLbl 
+	grid forget .main.right.focus 
+	grid forget .main.right.alertness
+	grid forget .main.right.discipline
+	grid forget .main.right.motivation
+	grid forget .main.right.obediance
+	grid forget .main.right.selfControl
+	grid forget .main.right.selfEsteem
+	grid forget .main.right.selfRespect
+	grid forget .main.right.betterGrades
+	grid forget .main.right.concentration
+	grid forget .main.right.achieveGoals
+	grid forget .main.right.manageStress
+	grid forget .main.right.selfConfidence
+	grid forget .main.right.respectForOthers
+	grid forget .main.right.healthBenefitsLbl
+	grid forget .main.right.cardiovascular 
+	grid forget .main.right.muscleEndurance
+	grid forget .main.right.muscularStrength
+	grid forget .main.right.bodyComposition
+	grid forget .main.right.skillBenefitsLbl
+	grid forget .main.right.agility 
+	grid forget .main.right.power
+	grid forget .main.right.speed 
+	grid forget .main.right.balance
+	grid forget .main.right.coordination
+	grid forget .main.right.reactionTime
+	grid forget .main.right.physicalBenefitsLbl 
+	grid forget .main.right.mobilitty 
+	grid forget .main.right.exercise 
+	grid forget .main.right.flexibility
+	grid forget .main.right.relaxation
+	grid forget .main.right.endurance
+	grid forget .main.right.muscleTone 
+	grid forget .main.right.contitioning
+	grid forget .main.right.rapidReeflexes
+	grid forget .main.right.weightControl
+	grid forget .main.right.physicalBenefits
+	grid forget .main.right.breathingControl
+	grid forget .main.right.practicalDefenseSkills
+	grid forget .main.right.submit2
+	.main.left.section2 configure -foreground black
+	buildSection3
+}
+
+proc submitSection3 { } {
+	grid forget .main.right.howFindAcademyLbl
+	grid forget .main.right.howFindAcademyEnt
+	grid forget .main.right.whatMotivatedLbl
+	grid forget .main.right.whatMotivatedEnt
+	grid forget .main.right.isThereAnyoneChildWouldLikeToAttendWithLbl 
+	grid forget .main.right.attendWithYes 
+	grid forget .main.right.attendWithNo
+	grid forget .main.right.attendWithWhoLbl 
+	grid forget .main.right.attendWithWhoEnt
+	grid forget .main.right.activitiesAlready
+	grid forget .main.right.activitiesAlreadyYes
+	grid forget .main.right.activitiesAlreadyNo
+	grid forget .main.right.activityLbl
+	grid forget .main.right.activityEnt
+	grid forget .main.right.mon 
+	grid forget .main.right.tue
+	grid forget .main.right.wed
+	grid forget .main.right.thu
+	grid forget .main.right.fri
+	grid forget .main.right.sat
+	grid forget .main.right.sun
+	grid forget .main.right.timeLbl 
+	grid forget .main.right.timeEnt
+	grid forget .main.right.submit3
+	.main.left.section3 configure -foreground black
+	buildSection4
+}
+
+proc submitSection4 { } {
+	grid forget .main.right.medicalConditionsLbl 
+	grid forget .main.right.medicalConditionsSubLbl
+	grid forget .main.right.asthma 
+	grid forget .main.right.arthritus
+	grid forget .main.right.diabetes
+	grid forget .main.right.kneeProblems
+	grid forget .main.right.backProblems
+	grid forget .main.right.heartConditions
+	grid forget .main.right.highBloodPressure
+	grid forget .main.right.alergicReactionLbl
+	grid forget .main.right.alergicReactionEnt
+	grid forget .main.right.physicalLimitationsLbl
+	grid forget .main.right.physicalLimitationsEnt
+	grid forget .main.right.specialMedicationLbl 
+	grid forget .main.right.specialMedicationEnt
+	grid forget .main.right.submit4
+	.main.left.section4 configure -foreground black
+	buildSection5
+
+
+}
 
 # Menu
 frame .menubar -bd 2 -relief raised
