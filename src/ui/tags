@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/3fdf28bc/
+buildFrontScreen	sections.tcl	/^proc buildFrontScreen { } {$/;"	p
+buildSection1	sections.tcl	/^proc buildSection1 { studentID paymentID } {$/;"	p
+buildSection2	sections.tcl	/^proc buildSection2 { studentID paymentID } {$/;"	p
+buildSection3	sections.tcl	/^proc buildSection3 { studentID } {$/;"	p
+buildSection4	sections.tcl	/^proc buildSection4 { studentID } {$/;"	p
+buildSection5	sections.tcl	/^proc buildSection5 { studentID } {$/;"	p
+buildSection6	sections.tcl	/^proc buildSection6 { studentID } {$/;"	p
